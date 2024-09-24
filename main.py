@@ -46,13 +46,11 @@ if sys.version_info.major == 3 and sys.version_info.minor <= 11:
 		reinstall_tenacity()
 
 default_installs = [
-	"C:/Program Files/Google/Chrome/Application/chrome.exe",
-	"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
-	"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
-	"C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/brave.exe",
-	"C:/Program Files/Microsoft/Edge/Application/msedge.exe",
+	"/usr/bin/chromium",
+	"/usr/bin/brave",
 ]
 args = [
+	"--proxy-server=socks5://127.0.0.1:9099",
 	"--no-sandbox",
 	"--disable-setuid-sandbox",
 	"--disable-infobars",
